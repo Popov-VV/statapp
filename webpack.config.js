@@ -1,24 +1,24 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  mode: 'development',
+  mode: "production",
   watch: true,
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   entry: {
-    main: './src/scripts/tracker.ts',
+    main: "./src/scripts/tracker.ts",
   },
   output: {
-    path: path.resolve(__dirname, './dist/client'),
-    filename: 'tracker.js',
+    path: path.resolve(__dirname, "./dist/client"),
+    filename: "tracker.js",
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: [".ts", ".tsx", ".js"],
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: "ts-loader",
       },
     ],
   },

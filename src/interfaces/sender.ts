@@ -1,11 +1,13 @@
-import { EventModel } from '../models/Event'
+import { EventModel } from "../models/Event";
 
-export type SenderFunction = (event: EventModel[]) => 'success' | 'error'
+export type SenderFunction = (
+  event: EventModel[]
+) => Promise<"success" | Error>;
 
 export interface SenderInterface {
-    send: SenderFunction
+  send: SenderFunction;
 }
 
 export interface SenderConstructor {
-    new (): SenderInterface;
+  new (): SenderInterface;
 }
